@@ -1,0 +1,21 @@
+#+TITLE: clipboard_filter Readme
+#+AUTHOR: Akisute
+#+DATE: 2012-06-02
+#+LANGUAGE: ja
+#+OPTIONS: toc:2 H:6
+
+* 概要
+  clipboard の文字列に任意 ruby スクリプトをかける．
+
+* 使い方
+  : $ ruby bin/cbf.rb script.rb
+  script.rb は入力を標準入力，出力を標準出力とするように記述する．
+
+  使用には xclip がインストールされている必要がある．Ubuntu であれば以下でインストール可能．
+  : $ sudo apt-get install xclip
+
+* scripts
+  - org2aswiki.rb :: org 文書を aswiki 形式に変換する．
+  - to_file_name.rb :: スペースを '_' に変換してファイル名に適した形式に変換する．
+  - to_snake_case.rb :: スネークケースに変換する．
+  - yen_to_slash.rb :: 円記号(バックスラッシュ)をスラッシュに変換する．Windowsのファイルパスの変換などに使用．
