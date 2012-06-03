@@ -17,7 +17,7 @@ ARGF.each_line do |line|
   when HEADLINE_RE
     line.sub!(HEADLINE_RE) {"#{'=' * ($1.length + 1)}"}
   when DEFLIST_RE
-    line.sub!(DEFLIST_RE) {"#{$1}+#{$2}"}
+    line.sub!(DEFLIST_RE) {"#{$1}+#{$2}\n"}
   when UNORDERED_LIST_RE then
     line.sub!(UNORDERED_LIST_RE, '\1*')
   when ORDERED_LIST_RE then
